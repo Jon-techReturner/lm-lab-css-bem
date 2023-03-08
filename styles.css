@@ -26,6 +26,11 @@ body {
     width: 50%;
     height: 50%;
 }
+.main__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .card__wrapper {
     display: flex;
     flex-wrap: wrap;
