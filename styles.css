@@ -17,6 +17,10 @@ body {
 /* Image Card */
 
 /* Structure */
+#canvas{
+    width: 100%;
+    height: 100%;
+}
 .header {
     display: flex;
     justify-content: center;
@@ -98,12 +102,12 @@ img {
     box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3); 
 }
 .card__body--DarthVader{
-    background: var(--Darth--Vader-color);
     opacity: 1px;
+    background: var(--Darth--Vader-color);
 }
 .card__body--Yoda {
-    background: var(--Yoda-color);
     opacity: 1px;
+    background: var(--Yoda-color);
 }
 .card__title--DarthVader, .card__text--DarthVader{
     color: var(--Darth--Vader--font);
