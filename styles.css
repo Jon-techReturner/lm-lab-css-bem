@@ -1,7 +1,110 @@
-/* You can delete / re-write this img class  */
-
-img {
-    max-width: 200px;
+:root {
+    --Darth--Vader-color: #000000;
+    --Yoda-color: #FFE81F;
+    --light-color: #FFFF;
+    --Darth--Vader--font: #fff;
+    --Yoda--font: #101010;
 }
 
-/* Happy coding! */
+body {
+    background-image: url(./images/background-gif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--light-color);
+}
+
+
+/* Image Card */
+
+/* Structure */
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+.header img {
+    width: 50%;
+    height: 50%;
+}
+.card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card__container {
+    width: 300px;
+    position: relative;
+    border-radius: 5px;
+    text-align: left;
+    padding: 20px 10px 20px;
+}
+
+.card__image {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px 5px 0px 0px;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.card__image:hover img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card__text {
+    padding: 0 15px 15px;
+    line-height: 1.5;
+}
+
+.card__title {
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+}
+
+/* Skin */
+.card__container--DarthVader {
+    border: 1px solid rgb(255, 193, 47);
+    -webkit-box-shadow: 10px 10px 10px 10px rgba(255, 193, 47, 0.3);
+    -moz-box-shadow: 10px 10px 10px 10px rgba(255, 193, 47, 0.3);
+    -o-box-shadow: 10px 10px 10px 10px rgba(255, 193, 47, 0.3);
+    box-shadow: 10px 10px 10px 10px rgba(255, 193, 47, 0.3);
+}
+.card__container--Yoda {
+    border: 1px solid greenyellow;
+    -webkit-box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
+    -moz-box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
+    -o-box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
+    box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3); 
+}
+.card__body--DarthVader{
+    background: var(--Darth--Vader-color);
+    opacity: 1px;
+}
+.card__body--Yoda {
+    background: var(--Yoda-color);
+    opacity: 1px;
+}
+.card__title--DarthVader, .card__text--DarthVader{
+    color: var(--Darth--Vader--font);
+    text-shadow: 2px 4px 3px rgba(253, 251, 251, 0.978);
+}
+.card__title--Yoda, .card__text--Yoda{
+    color: var(--Yoda--font);
+    text-shadow: 2px 4px 3px rgba(207, 171, 171, 0.978);
+}
