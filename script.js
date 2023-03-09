@@ -1,78 +1,104 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let spots = [];
-let hue = 0;
+const darkside = [
+    {
+        "title": "THE DARK SIDE",
+        "name": "DARTH VADER",
+        "photo": "./images/darth-vader.png"
+    },
+    {
+        "title": "THE DARK SIDE",
+        "name": "ASAJJ VENTRESS",
+        "photo": "./images/Asajj-Ventress-darkside.png"
+    },
+    {
+        "title": "THE DARK SIDE",
+        "name": "KYLO REN",
+        "photo": "./images/Kylo-ren-darkside.png"
+    },
+    {
+        "title": "THE DARK SIDE",
+        "name": "SAVAGE OPRESS",
+        "photo": "./images/Savage-Opress-darkside.png"
+    }
+];
 
-const mouse = {
-    x: undefined,
-    y: undefined
-}
+const theForce = [
+    {
+        "title": "THE FORCE",
+        "name": "YODA",
+        "photo": "./images/yoda-theForce.png"
+    },
+    {
+        "title": "THE FORCE",
+        "name": "OBI WAN KINOBI",
+        "photo": "./images/Obi-Wan-kenobi-theForce.png"
+    },
+    {
+        "title": "THE FORCE",
+        "name": "ANAKIN SKYWALKER",
+        "photo": "./images/Anakin-skywalker-theForce.png"
+    },
+    {
+        "title": "THE FORCE",
+        "name": "Chewbacca aka Chewie",
+        "photo": "./images/chewbacca-theForce.png"
+    }
+];
 
-canvas.addEventListener('mousemove', function (event){
-    mouse.x = event.x;
-    mouse.y = event.y;
-    for (let i=0; i < 3; i++){
-        spots.push(new Particle());
-    }
-})
-class Particle{
-    constructor(){
-        this.x = mouse.x;
-        this.y = mouse.y;
-        this.size = Math.random() * 2 + 0.1;
-        this.speedX = Math.random() * 2 - 1;
-        this.speedY = Math.random() * 2 - 1;
-        this.color = 'hsl(' + hue + ', 100%, 50%)';
-    }
-    update(){
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if(this.size > 0.1) this.size -= 0.03;
-    }
-    draw(){
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-function handleParticle() {
-    for (let i = 0; i < spots.length; i++){
-        spots[i].update();
-        spots[i].draw();
-        for (let j = i; j < spots.length; j++){
-            const dx = spots[i].x - spots[j].x;
-            const dy = spots[i].y - spots[j].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < 90){
-                ctx.beginPath();
-                ctx.strokeStyle = spots[i].color;
-                ctx.lineWidth = spots[i].size / 10;
-                ctx.moveTo(spots[i].x, spots[i].y);
-                ctx.lineTo(spots[j].x, spots[j].y);
-                ctx.stroke();
-            }
-        }
-        if (spots[i].size <= 0.3){
-            spots.splice(i, 1); i--;
-        }
-    } 
-}
-function animate() {
-    ctx.clearRect(0,0, canvas.width, canvas.height);
-    handleParticle();
-    hue++;
-    requestAnimationFrame(animate);
-}
-window.addEventListener('resize', function() {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
-    init();
-})
-window.addEventListener('mouseout', function(){
-    mouse.x = undefined;
-    mouse.y = undefined;
-})
-animate();
+const container__darkside = document.getElementById('card__darkside');
+darkside.forEach((result, index) => {
+    const card = document.createElement('div');
+    card.classList = 'card__body';
+    const content = `
+    <div class="card__container card__container--DarthVader ${index}">
+        <div class="card__body card__body--DarthVader">
+            <div class="card__title card__title--DarthVader">
+                <h2>${result.title}</h2>
+            </div>
+            <div class="card__image">
+                <img src="${result.photo}" alt="a photo of master yoda, looks like meditating" class="img__darkside-${index}">
+            </div>
+            <div class="card__content">
+                <h4>${result.name}</h4>
+                <p class="card__text card__text--Yoda">LOVE</p>
+                <p class="card__text card__text--Yoda">BEAUTY</p>
+                <p class="card__text card__text--Yoda">CSS THAT SCALES!</p>
+                <p class="card__text card__text--Yoda">GREAT WARRIOR. WARS NOT MAKE ONE GREAT!</p>
+            </div>
+            <div class="card__button">
+                <button class="button buttonDanger">Dark</button>
+            </div>
+        </div>
+    </div>
+    `;
+    container__darkside.innerHTML += content;
+});
+
+const container__theForce = document.getElementById('card__theForce');
+theForce.forEach((result, index) => {
+    const card = document.createElement('div');
+    card.classList = 'card__body';
+    const content = `
+    <div class="card__container card__container--Yoda ${index}">
+        <div class="card__body card__body--Yoda">
+            <div class="card__title card__title--Yoda">
+                <h2>${result.title}</h2>
+            </div>
+            <div class="card__image">
+                <img src="${result.photo}" alt="a photo of master yoda, looks like meditating" class="img__theForce-${index}">
+            </div>
+            <div class="card__content">
+                <h4>${result.name}</h4>
+                <p class="card__text card__text--Yoda">LOVE</p>
+                <p class="card__text card__text--Yoda">BEAUTY</p>
+                <p class="card__text card__text--Yoda">CSS THAT SCALES!</p>
+                <p class="card__text card__text--Yoda">GREAT WARRIOR. WARS NOT MAKE ONE GREAT!</p>
+            </div>
+            <div class="card__button">
+                <button class="button buttonWarning">Force</button>
+            </div>
+        </div>
+    </div>
+    `;
+    container__theForce.innerHTML += content;
+});
+

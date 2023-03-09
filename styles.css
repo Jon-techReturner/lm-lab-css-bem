@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;800&family=Roboto:wght@400;700&display=swap');
+
 :root {
-    --Darth--Vader-color: #000000;
-    --Yoda-color: #FFE81F;
+    
+    --darthVader-color-blue: #023273;
+    --darthVader-color-black: #0c0901;
+    --darthVader-color-darkBlue: #03143F;
+    
+    --yoda-color-yellow: #FFDF00;
+    --yoda-color-orange: #FF9529;
+    --yoda-color-yellowOrange: #FDCC0D;
+
     --light-color: #FFFF;
-    --Darth--Vader--font: #fff;
-    --Yoda--font: #101010;
+    --dark-color: #000;
+
+    /* font style */
+    --header-font-family: 'Libre Franklin', sans-serif;
+    --header-font-weight: 800;
+    --header-font-style: normal;
+    --body-font-family: 'Roboto', sans-serif;
+    --body-font-weight: 400;
+    --body-font-style: normal; 
 }
 
 body {
@@ -40,6 +56,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
 .card__container {
     width: 300px;
@@ -58,8 +79,8 @@ body {
 
 img {
     width: 100%;
+    aspect-ratio: auto 1 / 1; 
     border-radius: 5px 5px 0px 0px;
-
     -webkit-transition: all 0.8s;
     -moz-transition: all 0.8s;
     -o-transition: all 0.8s;
@@ -73,47 +94,85 @@ img {
     transform: scale(1.1);
 }
 
-.card__text {
-    padding: 0 15px 15px;
-    line-height: 1.5;
-}
-
 .card__title {
     top: 10px;
     left: 10px;
     font-size: 25px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 700;
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    font-style: var(--header-font-style);
 }
+.card__text {
+    padding: 0 15px 15px;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    font-style: var(--body-font-style);
+}
+.card__button{
+    display: flex;
+    justify-content: center;
+}
+.button {
+    width: 7rem;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+
 
 /* Skin */
 .card__container--DarthVader {
-    border: 1px solid rgb(255, 193, 47);
-    -webkit-box-shadow: 10px 10px 10px 10px rgba(255, 193, 47, 0.3);
-    -moz-box-shadow: 10px 10px 10px 10px rgba(255, 193, 47, 0.3);
-    -o-box-shadow: 10px 10px 10px 10px rgba(255, 193, 47, 0.3);
-    box-shadow: 10px 10px 10px 10px rgba(255, 193, 47, 0.3);
-}
-.card__container--Yoda {
     border: 1px solid greenyellow;
+    background: var(--darthVader-color-darkBlue);
+    opacity: 1px;
     -webkit-box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
     -moz-box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
     -o-box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
-    box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3); 
+    box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
+}
+.card__container--Yoda {
+    border: 1px solid var(--yoda-color-yellow);
+    background: var(--yoda-color-yellowOrange);
+    opacity: 1px;
+    -webkit-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+    -moz-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+    -o-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+    box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
 }
 .card__body--DarthVader{
     opacity: 1px;
-    background: var(--Darth--Vader-color);
+    background: var(--darthVader-color-blue);
 }
 .card__body--Yoda {
     opacity: 1px;
-    background: var(--Yoda-color);
+    background: var(--yoda-color-orange);
 }
 .card__title--DarthVader, .card__text--DarthVader{
-    color: var(--Darth--Vader--font);
+    color: var(--dark-color);
     text-shadow: 2px 4px 3px rgba(253, 251, 251, 0.978);
 }
 .card__title--Yoda, .card__text--Yoda{
-    color: var(--Yoda--font);
-    text-shadow: 2px 4px 3px rgba(207, 171, 171, 0.978);
+    color: var(--yoda-color);
+    text-shadow: 2px 4px 3px rgba(23, 22, 22, 0.978);
+}
+.card__text--DarthVader:hover{
+    color: var(--yoda-color);
+    font-family: var(--header-font-family);
+}
+.card__text--Yoda:hover{
+    color: var(--light-color);
+    font-family: var(--header-font-family);
+}
+.buttonDanger {
+    color: var(--light-color);
+    background: red;
+}
+.buttonWarning {
+    color: var(--light-color);
+    background: var(--yoda-color-orange);
 }
