@@ -75,6 +75,7 @@ body {
     margin: auto;
     overflow: hidden;
     border-radius: 5px 5px 0px 0px;
+    height: 200px;
 }
 
 img {
@@ -102,6 +103,11 @@ img {
     font-weight: var(--header-font-weight);
     font-style: var(--header-font-style);
 }
+.card__name {
+    display: flex;
+    justify-content: center;
+}
+
 .card__text {
     padding: 0 15px 15px;
     line-height: 1.5rem;
@@ -147,6 +153,10 @@ img {
 .card__body--DarthVader{
     opacity: 1px;
     background: var(--darthVader-color-blue);
+}
+.card__name-Yoda, .card__name-DarthVader {
+    color: var(--yoda-color);
+    text-shadow: 2px 4px 3px rgba(23, 22, 22, 0.978);
 }
 .card__body--Yoda {
     opacity: 1px;

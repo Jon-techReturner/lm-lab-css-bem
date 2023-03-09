@@ -39,7 +39,7 @@ const theForce = [
     },
     {
         "title": "THE FORCE",
-        "name": "Chewbacca aka Chewie",
+        "name": "CHEWBACCA aka 'CHEWIE'",
         "photo": "./images/chewbacca-theForce.png"
     }
 ];
@@ -49,7 +49,7 @@ darkside.forEach((result, index) => {
     const card = document.createElement('div');
     card.classList = 'card__body';
     const content = `
-    <div class="card__container card__container--DarthVader ${index}">
+    <div class="card__container card__container--DarthVader darkside-${index}">
         <div class="card__body card__body--DarthVader">
             <div class="card__title card__title--DarthVader">
                 <h2>${result.title}</h2>
@@ -58,7 +58,9 @@ darkside.forEach((result, index) => {
                 <img src="${result.photo}" alt="a photo of master yoda, looks like meditating" class="img__darkside-${index}">
             </div>
             <div class="card__content">
-                <h4>${result.name}</h4>
+                <div class="card__name card__name-DarthVader">
+                    <h4>${result.name}</h4>
+                </div>
                 <p class="card__text card__text--Yoda">LOVE</p>
                 <p class="card__text card__text--Yoda">BEAUTY</p>
                 <p class="card__text card__text--Yoda">CSS THAT SCALES!</p>
@@ -78,7 +80,7 @@ theForce.forEach((result, index) => {
     const card = document.createElement('div');
     card.classList = 'card__body';
     const content = `
-    <div class="card__container card__container--Yoda ${index}">
+    <div class="card__container card__container--Yoda theForce-${index}">
         <div class="card__body card__body--Yoda">
             <div class="card__title card__title--Yoda">
                 <h2>${result.title}</h2>
@@ -87,7 +89,9 @@ theForce.forEach((result, index) => {
                 <img src="${result.photo}" alt="a photo of master yoda, looks like meditating" class="img__theForce-${index}">
             </div>
             <div class="card__content">
-                <h4>${result.name}</h4>
+                <div class="card__name card__name-Yoda">
+                    <h4>${result.name}</h4>
+                </div>
                 <p class="card__text card__text--Yoda">LOVE</p>
                 <p class="card__text card__text--Yoda">BEAUTY</p>
                 <p class="card__text card__text--Yoda">CSS THAT SCALES!</p>
