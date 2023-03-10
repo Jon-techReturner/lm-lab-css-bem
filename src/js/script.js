@@ -68,7 +68,7 @@ darkside.forEach((result, index) => {
                 <img src="${result.photo}" alt="a photo of master yoda, looks like meditating" class="img__darkside-${index}">
             </div>
             <div class="card__button">
-                <button class="button buttonDanger button${result.class_name}">Dark</button>
+                <button class="button button__${result.class_name}">Dark</button>
             </div>
         </div>
     </div>
@@ -90,7 +90,7 @@ theForce.forEach((result, index) => {
                 <img src="${result.photo}" alt="a photo of master yoda, looks like meditating" class="img__theForce-${index}">
             </div>
             <div class="card__button">
-                <button class="button buttonWarning button${result.class_name}">Force</button>
+                <button class="button button__${result.class_name}">Force</button>
             </div>
         </div>
     </div>

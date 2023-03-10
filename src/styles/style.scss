@@ -63,6 +63,14 @@ body {
     text-align: left;
     padding: 20px 10px 20px;
 }
+.darkside-0, .darkside-1, .darkside-2, .darkside-3, .darkside-4 {
+    transform: scale(0.7) translate(0px, -50px) skew(15deg, 0deg);
+    padding: 2rem 2rem;
+}
+.theForce-0, .theForce-1, .theForce-2, .theForce-3, .theForce-4 {
+    transform: scale(0.7) translate(0px, -50px) skew(-15deg, 0deg);
+    padding: 2rem 2rem;
+}
 
 .card__image {
     position: relative;
@@ -119,18 +127,12 @@ img {
     text-align: center;
     font-size: 1rem;
 }
+.button:hover {
+    border: 5px dashed #f5f7f2;
+}
 
 
 /* Skin */
-
-.buttonDanger {
-    color: $darthVader-color-white;
-    background: $darkside__button;
-}
-.buttonWarning {
-    color: $yoda-color-white;
-    background: $theForce__button;
-}
 
 @media screen and (min-width: 200px) and (max-width: 900px) {
     .main__wrapper, .header, .card__title{
@@ -141,5 +143,13 @@ img {
     body {
         font-size: 1.5rem;
 
+    }
+    .darkside-0, .darkside-1, .darkside-2, .darkside-3, .darkside-4 {
+        transform: none;
+        padding: 2rem 2rem;
+    }
+    .theForce-0, .theForce-1, .theForce-2, .theForce-3, .theForce-4 {
+        transform: none;
+        padding: 2rem 2rem;
     }
 }

@@ -6,15 +6,14 @@
     border: 1px solid $yoda-color-yellow;
     background: $yoda-color-yellowOrange;
     opacity: 1px;
-    -webkit-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
-    -moz-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
-    -o-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
-    box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+    box-shadow: 9px 9px 11px 1px rgba(246, 239, 97, 0.714);
 }
 
 .card__body--Yoda {
     opacity: 1px;
-    background: $yoda-color-orange;
+    background-image: url('../../images/theForce-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card__name--Yoda {
@@ -24,13 +23,36 @@
 }
 
 .card__title--Yoda{
-    color: $yoda-color-orange;
-    text-shadow: 2px 4px 3px rgba(248, 245, 245, 0.978);
+    color: $yoda-color-yellowOrange;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fbff18, 0 0 30px #fbff18, 0 0 40px #fbff18, 0 0 55px #fbff18, 0 0 75px #fbff18;
 }
 
 .card__text--Yoda:hover{
-    color: $yoda-color-white;
+    color: $yoda-color-orange;
     font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fbff18, 0 0 30px #fbff18, 0 0 40px #fbff18, 0 0 55px #fbff18, 0 0 75px #fbff18;
+}
+
+.button__yoda, .theForce-0 {
+    color: $yoda-color-white;
+    background: rgba(172, 255, 47, 0.442);
+}
+.button__obiwan, .theForce-1 {
+    color: $yoda-color-white;
+    background: rgba(3, 225, 250, 0.284);
+}
+.button__anakin, .theForce-2 {
+    color: $yoda-color-white;
+    background: rgba(0, 255, 204, 0.626);
+}
+.button__chewie, , .theForce-3 {
+    color: $yoda-color-white;
+    background: rgba(222, 184, 135, 0.29);
+}
+.button__ahsoka, , .theForce-4 {
+    color: $yoda-color-white;
+    background: rgba(255, 255, 0, 0.405);
 }
 
 
