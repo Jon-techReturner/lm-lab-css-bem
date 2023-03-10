@@ -34,6 +34,7 @@
   font-family: var(--header-font-family);
   font-weight: var(--header-font-weight);
   text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+  border-left: 2px solid rgba(255, 111, 0, 0.9);
 }
 
 .button__vader, .darkside-0 {
@@ -91,6 +92,7 @@
   font-family: var(--header-font-family);
   font-weight: var(--header-font-weight);
   text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fbff18, 0 0 30px #fbff18, 0 0 40px #fbff18, 0 0 55px #fbff18, 0 0 75px #fbff18;
+  border-left: 2px solid rgba(255, 225, 0, 0.605);
 }
 
 .button__yoda, .theForce-0 {
@@ -219,8 +221,8 @@ img {
 }
 
 .card__text {
-  padding: 0 15px 15px;
-  line-height: 1.5rem;
+  padding: 10px;
+  line-height: 2px;
   font-size: 1rem;
   font-family: var(--body-font-family);
   font-weight: var(--body-font-weight);
