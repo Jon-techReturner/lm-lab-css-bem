@@ -1,0 +1,36 @@
+@import './variables';
+
+// skin
+
+.card__container--Yoda {
+    border: 1px solid $yoda-color-yellow;
+    background: $yoda-color-yellowOrange;
+    opacity: 1px;
+    -webkit-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+    -moz-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+    -o-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+    box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+}
+
+.card__body--Yoda {
+    opacity: 1px;
+    background: $yoda-color-orange;
+}
+
+.card__name--Yoda {
+    color: $yoda-color-white;
+    padding-top: .50em;
+    text-shadow: 2px 4px 3px rgba(23, 22, 22, 0.978);
+}
+
+.card__title--Yoda{
+    color: $yoda-color-orange;
+    text-shadow: 2px 4px 3px rgba(248, 245, 245, 0.978);
+}
+
+.card__text--Yoda:hover{
+    color: $yoda-color-white;
+    font-family: var(--header-font-family);
+}
+
+

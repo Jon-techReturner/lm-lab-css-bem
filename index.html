@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
     
     <title>BEM Notation & OOCSS: Writing scaleable CSS</title>
 </head>
@@ -18,11 +18,37 @@
             </div>
         </header>
         <div class="main__wrapper">
-            <div class="card__wrapper" id="card__darkside"></div>
-            <div class="card__wrapper" id="card__theForce"></div>
+            <div class="darkside__wrapper">
+                <div class="card__title card__title--DarthVader">
+                    <h2>THE DARK SIDE</h2>
+                </div>
+                <div class="card__content card__content--DarthVader">
+                    <ul class="card__text--wrapper card__text--DarthVader-style">
+                        <li class="card__text card__text--DarthVader">NESTING!</li>
+                        <li class="card__text card__text--DarthVader">CONFLICT!</li>
+                        <li class="card__text card__text--DarthVader">SPECIFICITY WARS & COOKIES</li>
+                    </ul>
+                </div>
+                <div class="card__wrapper" id="card__darkside"></div>
+            </div>
+            <div class="theForce__wrapper">
+                <div class="card__title card__title--Yoda">
+                    <h2>THE FORCE</h2>
+                </div>
+                <div class="card__content card__content--Yoda">
+                    <ul class="card__text--wrapper card__text--Yoda-style">
+                        <li class="card__text card__text--Yoda">LOVE</li>
+                        <li class="card__text card__text--Yoda">CSS THAT SCALES!</li>
+                        <li class="card__text card__text--Yoda">GREAT WARRIOR. WARS NOT MAKE ONE GREAT!</li>
+                    </ul>
+                </div>
+                <div class="card__wrapper" id="card__theForce"></div>
+            </div>
+            
+            
         </div>
    
-    <script src="./script.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>

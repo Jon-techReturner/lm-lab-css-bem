@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;800&family=Roboto:wght@400;700&display=swap");
+.card__container--DarthVader {
+  border: 1px solid greenyellow;
+  background: #03143F;
+  opacity: 1px;
+  -o-box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
+  box-shadow: 10px 10px 10px 10px rgba(97, 246, 100, 0.3);
+}
+
+.card__body--DarthVader {
+  opacity: 1px;
+  background: #023273;
+}
+
+.card__name--DarthVader {
+  padding-top: 0.5em;
+  color: #f8f7f4;
+  text-shadow: 2px 4px 3px rgba(23, 22, 22, 0.978);
+}
+
+.card__title--DarthVader {
+  color: #0c0901;
+  text-shadow: 2px 4px 3px rgba(253, 251, 251, 0.978);
+}
+
+.card__text--DarthVader {
+  color: #f8f7f4;
+  text-shadow: 2px 4px 3px rgba(13, 13, 13, 0.978);
+}
+
+.card__text--DarthVader:hover {
+  color: #f8f7f4;
+  font-family: var(--header-font-family);
+}
+
+.card__container--Yoda {
+  border: 1px solid #FFDF00;
+  background: #FDCC0D;
+  opacity: 1px;
+  -o-box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+  box-shadow: 10px 10px 10px 10px rgba(246, 239, 97, 0.714);
+}
+
+.card__body--Yoda {
+  opacity: 1px;
+  background: #FF9529;
+}
+
+.card__name--Yoda {
+  color: #fff;
+  padding-top: 0.5em;
+  text-shadow: 2px 4px 3px rgba(23, 22, 22, 0.978);
+}
+
+.card__title--Yoda {
+  color: #FF9529;
+  text-shadow: 2px 4px 3px rgba(248, 245, 245, 0.978);
+}
+
+.card__text--Yoda:hover {
+  color: #fff;
+  font-family: var(--header-font-family);
+}
+
+:root {
+  --light-color: #FFFF;
+  --dark-color: #000;
+  /* font style */
+  --header-font-family: "Libre Franklin", sans-serif;
+  --header-font-weight: 800;
+  --header-font-style: normal;
+  --body-font-family: "Roboto", sans-serif;
+  --body-font-weight: 400;
+  --body-font-style: normal;
+}
+
+body {
+  background-image: url(../../images/background-gif.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--light-color);
+}
+
+/* Image Card */
+/* Structure */
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.header img {
+  width: 50%;
+  height: 50%;
+}
+
+.main__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.theForce__wrapper, .darkside__wrapper, .card__wrapper, .card__title h4, .card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card__wrapper, .card__title, .card__name h4, .card__text--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card__container {
+  width: 300px;
+  position: relative;
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px 10px 20px;
+}
+
+.card__image {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px 5px 0px 0px;
+  height: 200px;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: auto 1/1;
+  border-radius: 5px 5px 0px 0px;
+  transition: all 0.8s;
+}
+
+.card__image:hover img {
+  transform: scale(1.1);
+}
+
+.card__title {
+  top: 10px;
+  font-size: 25px;
+  font-family: var(--header-font-family);
+  font-weight: var(--header-font-weight);
+  font-style: var(--header-font-style);
+}
+
+.card__text {
+  padding: 0 15px 15px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  font-style: var(--body-font-style);
+  text-decoration: none;
+  list-style: none;
+}
+
+.card__button {
+  padding: 5px 5px;
+}
+
+.button {
+  width: 7rem;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Skin */
+.buttonDanger {
+  color: #f8f7f4;
+  background: rgb(255, 4, 0);
+}
+
+.buttonWarning {
+  color: #fff;
+  background: rgb(10, 138, 10);
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+  .main__wrapper, .header, .card__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  body {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

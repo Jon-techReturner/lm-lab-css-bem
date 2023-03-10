@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;800&family=Roboto:wght@400;700&display=swap');
+@import './darkside';
+@import './theForce';
+@import './variables';
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+:root {
+    --light-color: #FFFF;
+    --dark-color: #000;
+
+    /* font style */
+    --header-font-family: 'Libre Franklin', sans-serif;
+    --header-font-weight: 800;
+    --header-font-style: normal;
+    --body-font-family: 'Roboto', sans-serif;
+    --body-font-weight: 400;
+    --body-font-style: normal; 
+}
+
+body {
+    background-image: url(../../images/background-gif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--light-color);
+}
+
+
+/* Image Card */
+
+/* Structure */
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+.header img {
+    width: 50%;
+    height: 50%;
+}
+.main__wrapper{
+    @include flexCenter(row);
+}
+.theForce__wrapper, .darkside__wrapper, .card__wrapper, .card__title h4, .card__button {
+    @include flexCenter(column);
+    flex-wrap: wrap;
+}
+.card__wrapper,.card__title, .card__name h4, .card__text--wrapper {
+    @include flexCenter(row);
+    flex-wrap: wrap;
+}
+
+.card__container {
+    width: 300px;
+    position: relative;
+    border-radius: 5px;
+    text-align: left;
+    padding: 20px 10px 20px;
+}
+
+.card__image {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px 5px 0px 0px;
+    height: 200px;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: auto 1 / 1; 
+    border-radius: 5px 5px 0px 0px;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+
+.card__image:hover img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card__title {
+    top: 10px;
+    font-size: 25px;
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    font-style: var(--header-font-style);
+}
+
+.card__text {
+    padding: 0 15px 15px;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    font-style: var(--body-font-style);
+    text-decoration: none;
+    list-style: none;
+}
+.card__button {
+    padding: 5px 5px;
+}
+
+.button {
+    width: 7rem;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/* Skin */
+
+.buttonDanger {
+    color: $darthVader-color-white;
+    background: $darkside__button;
+}
+.buttonWarning {
+    color: $yoda-color-white;
+    background: $theForce__button;
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+    .main__wrapper, .header, .card__title{
+        @include flexCenter(column);
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    body {
+        font-size: 1.5rem;
+
+    }
+}
